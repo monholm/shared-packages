@@ -25,9 +25,9 @@ jobs:
       - name: Install dependencies
         run: yarn --immutable
 
-      # # We have to track the target/base branch to allow filtering the changes
-      # - name: Track target branch
-      #   run: git branch --track $GITHUB_BASE_REF origin/$GITHUB_BASE_REF
+      # We have to track the target/base branch to allow filtering the changes
+      - name: Track target branch
+        run: git branch --track $GITHUB_BASE_REF origin/$GITHUB_BASE_REF
 
       - name: Pr check
         run: yarn pr-check --filter [HEAD...$GITHUB_BASE_REF]
