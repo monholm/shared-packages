@@ -1,0 +1,31 @@
+name: Pull Request
+on:
+  pull_request:
+jobs:
+  pr-check:
+    runs-on: ubuntu-24.04
+    steps:
+      - name: Check out repository code
+        uses: actions/checkout@v4
+
+      - name: Enable corepack
+        run: corepack enable
+
+      - name: Setup node
+        uses: actions/setup-node@v4
+        with:
+          node-version-file: .node-version
+          cache: yarn
+
+      - name: Enable corepack
+        run: corepack enable
+
+      - name: Install dependencies
+        run: yarn --immutable
+
+      # # We have to track the target/base branch to allow filtering the changes
+      # - name: Track target branch
+      #   run: git branch --track $GITHUB_BASE_REF origin/$GITHUB_BASE_REF
+
+      - name: Pr check
+        run: yarn pr-check --filter [$GITHUB_HEAD_REF...$GITHUB_BASE_REF]
