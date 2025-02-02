@@ -30,4 +30,4 @@ jobs:
         run: git branch --track $GITHUB_BASE_REF origin/$GITHUB_BASE_REF
 
       - name: Pr check
-        run: yarn pr-check --filter [HEAD...$GITHUB_BASE_REF]
+        run: yarn pr-check --filter=[$GITHUB_HEAD_REF...$GITHUB_BASE_REF]
