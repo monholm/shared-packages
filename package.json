@@ -1,0 +1,11 @@
+{
+  "name": "@monholm/shared-packages",
+  "private": true,
+  "packageManager": "yarn@4.6.0",
+  "workspaces": [
+    "packages/*"
+  ],
+  "devDependencies": {
+    "turbo": "2.4.0"
+  }
+}
