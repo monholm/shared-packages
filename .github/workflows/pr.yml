@@ -25,7 +25,7 @@ jobs:
 
       # We have to track the target/base branch to allow filtering the changes
       - name: Track target branch
-        run: git branch --track $GITHUB_BASE_REF origin/$GITHUB_BASE_REF
+        run: git fetch && git branch --track $GITHUB_BASE_REF origin/$GITHUB_BASE_REF
 
       - name: Pr check
         run: yarn pr-check --filter [$GITHUB_HEAD_REF...$GITHUB_BASE_REF]
