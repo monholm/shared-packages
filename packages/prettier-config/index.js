@@ -7,3 +7,5 @@ export default {
   experimentalTernaries: true,
   singleQuote: true,
 };
+
+// some change
