@@ -7,8 +7,6 @@ jobs:
     steps:
       - name: Check out repository code
         uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
 
       - name: Enable corepack
         run: corepack enable
@@ -25,9 +23,5 @@ jobs:
       - name: Install dependencies
         run: yarn --immutable
 
-      # We have to track the target/base branch to allow filtering the changes
-      - name: Track target branch
-        run: git branch --track $GITHUB_BASE_REF origin/$GITHUB_BASE_REF
-
       - name: Pr check
-        run: yarn pr-check --filter=...[$GITHUB_BASE_REF]
+        run: yarn pr-check
