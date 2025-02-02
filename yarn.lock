@@ -5,6 +5,16 @@ __metadata:
   version: 8
   cacheKey: 10c0
 
+"@monholm/prettier-config@workspace:packages/prettier-config":
+  version: 0.0.0-use.local
+  resolution: "@monholm/prettier-config@workspace:packages/prettier-config"
+  dependencies:
+    prettier: "npm:3.4.2"
+  peerDependencies:
+    prettier: ">= 3"
+  languageName: unknown
+  linkType: soft
+
 "@monholm/shared-packages@workspace:.":
   version: 0.0.0-use.local
   resolution: "@monholm/shared-packages@workspace:."
@@ -20,6 +30,15 @@ __metadata:
     typescript: ">= 5"
   languageName: unknown
   linkType: soft
+
+"prettier@npm:3.4.2":
+  version: 3.4.2
+  resolution: "prettier@npm:3.4.2"
+  bin:
+    prettier: bin/prettier.cjs
+  checksum: 10c0/99e076a26ed0aba4ebc043880d0f08bbb8c59a4c6641cdee6cdadf2205bdd87aa1d7823f50c3aea41e015e99878d37c58d7b5f0e663bba0ef047f94e36b96446
+  languageName: node
+  linkType: hard
 
 "turbo-darwin-64@npm:2.4.0":
   version: 2.4.0

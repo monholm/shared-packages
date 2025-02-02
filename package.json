@@ -5,6 +5,10 @@
   "workspaces": [
     "packages/*"
   ],
+  "scripts": {
+    "format": "turbo format",
+    "format-check": "turbo format-check"
+  },
   "devDependencies": {
     "turbo": "2.4.0"
   }

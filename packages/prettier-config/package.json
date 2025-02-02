@@ -1,0 +1,19 @@
+{
+  "name": "@monholm/prettier-config",
+  "version": "0.0.0",
+  "type": "module",
+  "exports": "./index.js",
+  "files": [
+    "index.js"
+  ],
+  "scripts": {
+    "format": "prettier . --write --cache-location=_unused",
+    "format-check": "prettier . --check --cache-location=_unused"
+  },
+  "peerDependencies": {
+    "prettier": ">= 3"
+  },
+  "devDependencies": {
+    "prettier": "3.4.2"
+  }
+}
