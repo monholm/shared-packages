@@ -13,6 +13,14 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@monholm/tsconfig@workspace:packages/tsconfig":
+  version: 0.0.0-use.local
+  resolution: "@monholm/tsconfig@workspace:packages/tsconfig"
+  peerDependencies:
+    typescript: ">= 5"
+  languageName: unknown
+  linkType: soft
+
 "turbo-darwin-64@npm:2.4.0":
   version: 2.4.0
   resolution: "turbo-darwin-64@npm:2.4.0"

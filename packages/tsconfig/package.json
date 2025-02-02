@@ -1,0 +1,12 @@
+{
+  "name": "@monholm/tsconfig",
+  "version": "0.0.0",
+  "type": "module",
+  "exports": "./tsconfig.json",
+  "files": [
+    "tsconfig.json"
+  ],
+  "peerDependencies": {
+    "typescript": ">= 5"
+  }
+}
